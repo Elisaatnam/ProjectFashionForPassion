@@ -59,11 +59,12 @@ h2, .blog-posts a {
 }
 
 h3 {
-    font-size: 6.5rem;
+    font-size: 5.52vw;
     margin-bottom: 2vh;
 }
 .expertise-column h3 {
     margin-bottom: 0;
+    transition: color .5s;
 }
 
 h4 {
@@ -105,11 +106,16 @@ a{
     color: var(--white);
     font-size: 1.3rem;
     font-weight: 600;
+    transition: color .5s;
 }
 
 a:hover {
     color: var(--golden);
 }
+
+footer div a {
+    margin-bottom: 2vh;
+ }
 
 /* Buttons */
 .btn {
@@ -120,9 +126,21 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: .5s;
 }
 
-.btn:hover {
+.btn2 {
+    width: 8vw;
+    height: 4vh;
+    border: .1px solid var(--grey-opcty);
+    border-radius: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+}
+
+.btn:hover, .btn2:hover {
     background-color: var(--golden);
     color: var(--black);
 }
@@ -163,17 +181,21 @@ nav {
 /* MAIN */
 main {
     background-color: var(--bg-color);
+    margin-bottom: 0;
 }
 
 section {
     margin: 0 15vw 10vh 15vw;
     border-bottom: .1px solid var(--grey-opcty);
-    
 }
+
+section:last-of-type {
+    margin-bottom: 0;
+}
+
 /* SECTION .hero */
 .hero {
-    background-image: repeating-linear-gradient(to right, rgba(153, 153, 153, 0.04), rgba(153, 153, 153, 0.04) 1px, transparent 1px, transparent);
-    background-size: 10vw;
+    background: url(../img/19.png) no-repeat center;
     padding: 5vh 0;
     position: relative;
 }
@@ -193,7 +215,7 @@ section {
     border: .5px solid #E8BF96;
     border-radius: 50%;
 }
-
+  
 .triangle {
     width: 10rem;
     height: 10rem;
@@ -281,19 +303,23 @@ section {
     align-items: center;
 }
 
+.about-title:last-of-type {
+    border-bottom: none;
+}
+
 .about-title .btn {
     margin-bottom: var(--sctn-mrgn);
 }
 
 /* SECTION .selected-works */
 
-.selected-works article, .blog article:first-of-type {
+.selected-works article, .blog article:first-of-type, .nominated article {
     display: grid;
     grid-template-columns: 2fr 2fr;
     grid-template-rows: auto;
    
 }
-.selected-works article:first-of-type, .blog article:first-of-type {
+.selected-works article:first-of-type, .blog article:first-of-type, .nominated article:first-of-type{
     margin-left: 5vw;
     margin-bottom: 10vh;
 }
@@ -305,7 +331,7 @@ article .sw-description {
 .sw-description p {
     margin-left: 2vw;
 }
-.selected-works .btn, .blog .btn{
+.selected-works .btn, .blog .btn, .nominated article img{
     place-self: center flex-end;
 }
 
@@ -323,36 +349,15 @@ article .sw-description {
     margin-bottom: 15vh;
 }
 
-.one .overlay {
-    position: absolute;
-    bottom: 120vh;
-    transition: 1s;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin-left: 2vw;
+.overlay {
+    padding: 2vh 1vw;
+    opacity: 0;
+    transition: opacity 1.5s;
 }
 
-.one:hover .overlay {
-    bottom: 85vh;
+.one:hover .overlay, .two:hover .overlay, .three:hover .overlay, .four:hover .overlay {
+    opacity: 1;
 }
-
-.two .overlay {
-    position: absolute;
-    right: -20%;
-    transition: 1s;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin-top: 2vh;
-}
-
-.two:hover .overlay {
-    right: 10%;
-}
-
 
 .portfolios1 .one {
     background: url(../img/1.jpeg) no-repeat center;
@@ -518,7 +523,7 @@ article .sw-description {
 
 /* SECTION .divine */
 .divine {
-    margin: 0;
+    margin: 0 0 var(--sctn-mrgn ) 0;
 }
 
 .divine article {
@@ -554,4 +559,33 @@ article .sw-description {
     z-index: 10;
 }
 
+/* SECTION .nominated */
 
+/* FOOTER */
+footer {
+    height: 20vh;
+    background-color: var(--bg-color);
+    border-top: .5px solid var(--grey-opcty);
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 2vh 0;
+}
+ footer div {
+    display: flex;
+    flex-direction: column;
+ }
+
+ footer .social {
+    display: flex;
+    flex-direction: row;
+    gap: 25%;
+ }
+
+ input {
+    background-color: var(--bg-color);
+    border:none;
+    border-bottom: .5px solid var(--grey-opcty);
+    font-size: 1vw;
+    margin-bottom: 2vh;
+ }
