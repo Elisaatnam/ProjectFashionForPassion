@@ -416,8 +416,8 @@ article .sw-description {
 
 .img1, .img2, .img3, .img4 {
     background-size: cover;
-    height: 60%;
-    width: 45%;
+    height: 70%;
+    width: 30%;
     position: absolute;
     opacity: 0;
     bottom: 0;
@@ -443,8 +443,8 @@ article .sw-description {
 
 
 .img5, .img6, .img7, .img8 {
-    height: 60%;
-    width: 45%;
+    height: 70%;
+    width: 30%;
     position: absolute;
     opacity: 0;
     top:0;
@@ -470,9 +470,9 @@ article .sw-description {
 }
 
 .costume:hover >.img1, .costume:hover >.img5,.acting:hover >.img2, .acting:hover >.img6,.modelling:hover >.img3, .modelling:hover >.img7,.artist:hover >.img4, .artist:hover >.img8 {
-    transition: opacity 0.4s ease-in-out;
+    transition: opacity .5s ease;
     opacity: 1;
-    border-radius: 10%;
+    border-radius: 7.5%;
 }
 
 /* SECTION .blog */
